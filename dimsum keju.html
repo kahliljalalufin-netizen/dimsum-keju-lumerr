@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dimsum Keju Lezat</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #fff8f0;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: linear-gradient(135deg, #ff9900, #ff6600);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
+      animation: fadeInDown 1s ease-in-out;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px rgba(0,0,0,0.2);
+      animation: popUp 1.5s ease forwards;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    .highlight {
+      color: #ffeb3b;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .intro {
+      text-align: center;
+      margin: 50px 0;
+      animation: fadeInUp 2s ease;
+    }
+
+    .intro h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #ff6600;
+    }
+
+    .intro p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.7;
+    }
+
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin: 50px 0;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 25px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      animation: fadeInUp 2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 15px;
+      transition: transform 0.5s ease;
+    }
+
+    .card img:hover {
+      transform: scale(1.1) rotate(-2deg);
+    }
+
+    .card h3 {
+      color: #ff6600;
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+    }
+
+    .card p {
+      margin-bottom: 15px;
+    }
+
+    .price {
+      font-weight: bold;
+      font-size: 1.3rem;
+      color: #e67e22;
+      margin-bottom: 15px;
+      animation: pulse 2s infinite;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #ff6600;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+      animation: bounce 2s infinite;
+    }
+
+    .btn:hover {
+      background: #ff9900;
+      transform: scale(1.1);
+    }
+
+    footer {
+      text-align: center;
+      background: #333;
+      color: white;
+      padding: 25px;
+      margin-top: 50px;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeInDown {
+      from {opacity: 0; transform: translateY(-40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes popUp {
+      0% {transform: scale(0.5); opacity: 0;}
+      100% {transform: scale(1); opacity: 1;}
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0);}
+      50% { transform: translateY(-8px);}
+    }
+
+    @keyframes pulse {
+      0% { color: #e67e22; }
+      50% { color: #ff3300; }
+      100% { color: #e67e22; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dimsum <span class="highlight">Keju</span></h1>
+    <p>Lezat, creamy, dan bikin ketagihan 😋🧀</p>
+  </header>
+
+  <div class="container">
+    <section class="intro">
+      <h2>Kenapa Harus Coba?</h2>
+      <p>
+        Dimsum keju kami dibuat dengan <span class="highlight">daging ayam premium</span> dan 
+        <span class="highlight">keju mozzarella lumer</span> yang menggoda. 
+        Setiap gigitan menghadirkan rasa gurih, lembut, dan sensasi keju yang memikat. 
+        Cocok jadi cemilan hangat atau teman kumpul bersama keluarga.
+      </p>
+    </section>
+
+    <section class="menu">
+      <div class="card">
+        <img src="https://thumb.viva.id/vivabanyumas/1265x711/2025/06/30/6862b599bb572-dimsum-keju-bakso-lumer-di-df-purwokerto_banyumas.jpg" alt="Dimsum Original">
+        <h3>Dimsum Keju extra</h3>
+        <p>Lembut, gurih, dan lumer banyak keju di mulut.</p>
+        <div class="price">Rp 20.000 / porsi</div>
+        <a href="https://wa.me/62891309273?text=Halo,%20saya%20mau%20pesan%20Dimsum%20Keju%20Original%20ya!" 
+   class="btn" target="_blank">Pesan Sekarang</a>
+
+      </div>
+
+      <div class="card">
+        <img src="https://brtv.co.id/wp-content/uploads/2025/07/WhatsApp-Image-2025-07-30-at-10.35.37-edited.jpeg" alt="Dimsum Spesial">
+        <h3>Dimsum Keju original</h3>
+        <p>Kombinasi ayam, dengan keju!</p>
+        <div class="price">Rp 15.000 / porsi</div>
+        <a href="https://wa.me/6285890356135?text=Halo,%20saya%20mau%20pesan%20Dimsum%20Keju%20Original%20ya!" 
+   class="btn" target="_blank">Pesan Sekarang</a>
+
+
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Dimsum Keju | Lumer di Mulut, Bikin Nagih 🧀🔥</p>
+  </footer>
+</body>
+</html>
